@@ -1,12 +1,6 @@
 // Configuración de Firebase (reemplaza con tus propias credenciales)
 const firebaseConfig = {
-  apiKey: "AIzaSyDZhAMDoqUyHCw-Z5t-TuFXSPSaIBU6atM",
-  authDomain: "descargas-46d41.firebaseapp.com",
-  databaseURL: "https://descargas-46d41.firebaseio.com",
-  projectId: "descargas-46d41",
-  storageBucket: "descargas-46d41.appspot.com",
-  messagingSenderId: "874647380507",
-  appId: "1:874647380507:web:1e54bd5e3e6e2e3017cebe"
+//tus datos firebase
 };
 
 // Inicializar Firebase
