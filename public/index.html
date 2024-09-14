@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Turnos Avanzado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-menu">
+    <h1>Calendario de Turnos</h1>
+    <div id="auth">
+      <button id="loginButton" class="primary">Iniciar sesión con Google</button>
+    </div>
+    <div id="userInfo" style="display: none;">
+      <p>Bienvenido, <span id="userName"></span></p>
+      <button id="logoutButton"  class="secondary">Cerrar sesión</button>
+    </div>
+  </div>
+   
+    <div id="calendarNavigation">
+        <button id="prevPeriod" class="secondary">&lt; Anterior</button>
+        <span id="currentPeriod"></span>
+        <button id="nextPeriod" class="secondary">Siguiente &gt;</button>
+ <div id="viewToggle"></div>
+        <button id="monthViewButton"  class="info">Vista Mensual</button>
+        <button id="weekViewButton"  class="info">Vista Semanal</button>
+    </div>
+    </div>
+    <div id="monthView">
+        <div id="calendar"></div>
+    </div>
+    <div id="weekView"></div>
+    <div id="statistics">
+        <h2>Estadísticas del período</h2>
+        <div id="totalHours"></div>
+        <div id="shiftDistribution"></div>
+    </div>
+    <button id="exportCSV">Exportar a CSV</button>
+    <button id="customizeColors">Personalizar Colores</button>
+
+    <div id="shiftModal" class="modal">
+        <div class="modal-content">
+            <h2>Seleccionar Turno</h2>
+            <select id="shiftSelect">
+                <option value="mañana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+                 <option value="">Sin turno</option>
+            </select>
+            <input type="number" id="hoursInput" min="1" max="24" value="8">
+            <button id="saveShift">Guardar</button>
+            <button id="cancelShift">Cancelar</button>
+        </div>
+    </div>
+
+    <div id="colorModal" class="modal">
+        <div class="modal-content">
+            <h2>Personalizar Colores</h2>
+            <label for="colorMañana">Mañana: </label>
+            <input type="color" id="colorMañana" value="#FFD700"><br>
+            <label for="colorTarde">Tarde: </label>
+            <input type="color" id="colorTarde" value="#87CEEB"><br>
+            <label for="colorNoche">Noche: </label>
+            <input type="color" id="colorNoche" value="#eae6ec"><br>
+            <button id="saveColors">Guardar</button>
+            <button id="cancelColors">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Firebase scripts aquí -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-messaging.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
